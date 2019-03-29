@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 
+import  static  android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.action.ViewActions.click;
 import  static android.support.test.espresso.matcher.ViewMatchers.withId;
 
@@ -41,6 +42,8 @@ public class MainActivityTest {
 
     @Test
     public void testClickButton() {
+//        mainActivity.findViewById(R.id.btn);
+        Espresso.onView(withId(R.id.editText)).perform(typeText("20161667"));
         Espresso.onView(withId(R.id.btn)).perform(click());
     }
 }
